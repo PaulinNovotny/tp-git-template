@@ -9,4 +9,8 @@ public class UtilisateurService {
 	public UtilisateurService() {
 		utilisateurRepository = new UtilisateurRepository();
 	}
+
+	public void afficherTous() {
+    IO.println(utilisateurRepository.getUtilisateurs());
+	}
 }

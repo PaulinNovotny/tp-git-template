@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TacheRepository {
-	List<Tache> taches = new ArrayList<>();
+	private final List<Tache> taches = new ArrayList<>();
 
 	public TacheRepository() {
 		taches.add(new Tache(1, "Créer le projet", Etat.TERMINEE, "jdupont"));
@@ -20,5 +20,9 @@ public class TacheRepository {
 		taches.add(new Tache(8, "Correction des bugs", Etat.NON_ASSIGNEE, null));
 		taches.add(new Tache(9, "Optimisation des performances", Etat.NON_ASSIGNEE, null));
 		taches.add(new Tache(10, "Déploiement en production", Etat.NON_ASSIGNEE, null));
+	}
+
+	public List<Tache> getTaches() {
+		return taches;
 	}
 }
